@@ -8,11 +8,27 @@
     $ git clone https://github.com/joiellantero/pinsetter-algorithms.git
     ```
 3. Navigate to the project
-4. Run the program
+4. Create virtual environment
+   ```shell
+   $ virtualenv env
+   ```
+5. Activate the virtual environment (macOS/Linux)
+   ```shell
+   $ source env/bin/activate
+   ``` 
+   Activate the virtual environment (Windows)
+    ```shell
+    $ env/Scripts/activate.bat
+    ```
+6. Install the dependencies
+   ```shell
+   $ pip install -r requirements.txt
+   ``` 
+7. Run the program
     ```shell
     $ python me1.py
     ```
-5. Star this repo if you like it!
+8. Star this repo if you like it!
 
 
 ### 🧐 Problem Statement
