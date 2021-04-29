@@ -57,10 +57,12 @@ if __name__ == "__main__":
         stop_loop = timeit.default_timer()
         res_loop_list.append("{:e}".format(stop_loop-start_loop))
 
+    # save the result of the total pins to the Result column
     df.loc[0].Result = int(res_formula)
     df.loc[1].Result = res_rec
     df.loc[2].Result = res_loop
 
+    # save the results of the first test to its respective columns
     df.loc[0].Speed_Test1 = res_formula_list[0]
     df.loc[1].Speed_Test1 = res_rec_list[0]
     df.loc[2].Speed_Test1 = res_loop_list[0]
@@ -73,4 +75,5 @@ if __name__ == "__main__":
     df.loc[1].Speed_Test3 = res_rec_list[2]
     df.loc[2].Speed_Test3 = res_loop_list[2]
 
+    # display the dataframe
     print('\n', df, '\n')
