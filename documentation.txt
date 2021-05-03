@@ -1,13 +1,58 @@
-CoE 163 Pinsetter Algorithms
-Submitted by Joie Angelo Llantero
+CoE 163 - Pinsetter Algorithms
+Submitted by Joie Angelo Llantero (201789868)
 
-Three algorithms were tested for this project, i.e., using a formula, recusion, and a single loop. 
 
-For the first algorithm, i.e., using a formula, the goal is to obtain the sum of arithmetic series. The reason for this is because each row also corresponds to how many pins it has, e.g., the first row has 1 pin, the third row has three pins, and so on. Hence, we have the sum of values of k, beginning at n_1 and ending with n_n, where k = (n*(n+1))/2. With this, we shall be able to compute for the k total number of pins required based on the number of desired rows. In this algorithm, it has the time and space complexity of O(1).
 
-Moreover, I used recursion modeled as an interative program for the second algorithm. The time complexity of this function is O(n). However, one disadvantage of using this algorithm is it requires more space hence, its space complexity is O(n).
+1. Implementing the algorithms.
 
-The final algorithm I implemented is by using a single for loop. The time complexity of this algorithm is O(n) and its space complexity is O(1).
+Three algorithms were tested for this project, i.e., using a formula, recusion, and a single loop.
 
-Upon running three tests, it can be observed that the quickest of the three algorithms is by using the formula, then it is succeeded by using recusion and lastly, by using a single for loop.
+The first algorithm, i.e., using a formula, the goal is to obtain the sum of arithmetic series. The reason for this is because each row also corresponds to how many pins it has, e.g., the first row has 1 pin, the third row has three pins, and so on. Hence, we have the sum of values of k, beginning at n_1 and ending with n_n, where k = (n*(n+1))/2. With this, we shall be able to compute for the k total number of pins required based on the number of desired rows. The function for this algorithm is shown below.l
 
+def pinsetter_formula(n):
+    return (n*(n+1))/2
+
+In this algorithm, it has the time and space complexity of O(1).
+
+Moreover, I used recursion modeled as an interative program for the second algorithm shown below.
+
+def pinsetter_recursion(n):
+    if (n > 0):
+        result = n + pinsetter_recursion(n-1)
+    else:
+        result = 0
+    return result
+
+In this function, the loop begins from n and stops when the value of n is zero. The time complexity of this function is O(n). However, one disadvantage of using this algorithm is it requires more space since O(recursion depth) hence, its space complexity is O(n).
+
+The final algorithm I implemented is by using a single for loop shown below.
+
+def pinsetter_loop(n):
+    result = 0
+    for i in range(1, n+1):
+        result += i
+    return result
+
+The time complexity of this algorithm is O(n) since it will loop n times which is dependent on the user's input; and the space complexity is O(1) since it only requires one variable to store the values.
+
+
+
+2. Testing the speed of the algorithms.
+
+Upon running three tests, it can be observed that the quickest of the three algorithms is by using the formula, it is then succeeded by using recusion and lastly, by using a single for loop. The results of the three tests are shown below.
+
+    Algorithm  Result   Speed_Test1   Speed_Test2   Speed_Test3
+0    Formula  125250  5.259850e-04  5.157320e-04  5.150170e-04
+1  Recursion  125250  1.268056e-01  1.250268e-01  1.240938e-01
+2   One Loop  125250  4.082843e-02  4.014788e-02  4.063739e-02 
+
+Furthermore, it can be observed that the recursion and the single for loop have similar time complexities however, the latter ended up being quicker. This is because recursion is more complex (for the computer) and sometimes isn't or cannot be optimized by the compiler. 
+
+
+
+3. Choosing the algorithm to load into my machine.
+
+Based on the results, it can be concluded that the best algorithm is the formula. It is the quickest of the three algorithms and also requires the least memory. On average, its speed is 0.5189ms which is approximately 8000% quicker than the single for loop and approximately 24000% quicker than recursion.
+
+0.1253087
+0.0405379
