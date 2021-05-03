@@ -7,6 +7,7 @@ def pinsetter_formula(n):
     return (n*(n+1))/2
 
 
+# using recursion to get the total number of pins to be used for n number of rows
 def pinsetter_recursion(n):
     if (n > 0):
         result = n + pinsetter_recursion(n-1)
@@ -15,6 +16,7 @@ def pinsetter_recursion(n):
     return result
 
 
+# using a loop to get the total number of pins to be used for n number of rows
 def pinsetter_loop(n):
     result = 0
     for i in range(1, n+1):
@@ -39,6 +41,7 @@ if __name__ == "__main__":
     res_rec_list = []
     res_loop_list = []
     
+    # testing the speed of the formula algorithm
     for i in range(0, 3):
         start_formula = timeit.default_timer()
         for i in range(0, 1440):
@@ -46,6 +49,7 @@ if __name__ == "__main__":
         stop_formula = timeit.default_timer()
         res_formula_list.append("{:e}".format(stop_formula-start_formula))
 
+    # testing the speed of the recursion algorithm
     for i in range(0, 3):
         start_recursion = timeit.default_timer()
         for i in range(0, 1440):
@@ -53,6 +57,7 @@ if __name__ == "__main__":
         stop_recursion = timeit.default_timer()
         res_rec_list.append("{:e}".format(stop_recursion-start_recursion))
 
+    # testing the speed of the loop algorithm
     for i in range(0, 3):
         start_loop = timeit.default_timer()
         for i in range(0, 1440):
@@ -69,11 +74,9 @@ if __name__ == "__main__":
     df.loc[0].Speed_Test1 = res_formula_list[0]
     df.loc[1].Speed_Test1 = res_rec_list[0]
     df.loc[2].Speed_Test1 = res_loop_list[0]
-
     df.loc[0].Speed_Test2 = res_formula_list[1]
     df.loc[1].Speed_Test2 = res_rec_list[1]
     df.loc[2].Speed_Test2 = res_loop_list[1]
-
     df.loc[0].Speed_Test3 = res_formula_list[2]
     df.loc[1].Speed_Test3 = res_rec_list[2]
     df.loc[2].Speed_Test3 = res_loop_list[2]
