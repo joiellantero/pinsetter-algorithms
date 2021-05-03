@@ -41,19 +41,22 @@ if __name__ == "__main__":
     
     for i in range(0, 3):
         start_formula = timeit.default_timer()
-        res_formula = pinsetter_formula(n)
+        for i in range(0, 1440):
+            res_formula = pinsetter_formula(n)
         stop_formula = timeit.default_timer()
         res_formula_list.append("{:e}".format(stop_formula-start_formula))
 
     for i in range(0, 3):
         start_recursion = timeit.default_timer()
-        res_rec = pinsetter_recursion(n)
+        for i in range(0, 1440):
+            res_rec = pinsetter_recursion(n)
         stop_recursion = timeit.default_timer()
         res_rec_list.append("{:e}".format(stop_recursion-start_recursion))
 
     for i in range(0, 3):
         start_loop = timeit.default_timer()
-        res_loop = pinsetter_loop(n)
+        for i in range(0, 1440):
+            res_loop = pinsetter_loop(n)
         stop_loop = timeit.default_timer()
         res_loop_list.append("{:e}".format(stop_loop-start_loop))
 
