@@ -1,0 +1,13 @@
+CoE 163 Pinsetter Algorithms
+Submitted by Joie Angelo Llantero
+
+Three algorithms were tested for this project, i.e., using a formula, recusion, and a single loop. 
+
+For the first algorithm, i.e., using a formula, the goal is to obtain the sum of arithmetic series. The reason for this is because each row also corresponds to how many pins it has, e.g., the first row has 1 pin, the third row has three pins, and so on. Hence, we have the sum of values of k, beginning at n_1 and ending with n_n, where k = (n*(n+1))/2. With this, we shall be able to compute for the k total number of pins required based on the number of desired rows. In this algorithm, it has the time and space complexity of O(1).
+
+Moreover, I used recursion modeled as an interative program for the second algorithm. The time complexity of this function is O(n). However, one disadvantage of using this algorithm is it requires more space hence, its space complexity is O(n).
+
+The final algorithm I implemented is by using a single for loop. The time complexity of this algorithm is O(n) and its space complexity is O(1).
+
+Upon running three tests, it can be observed that the quickest of the three algorithms is by using the formula, then it is succeeded by using recusion and lastly, by using a single for loop.
+
