@@ -52,7 +52,5 @@ Furthermore, it can be observed that the recursion and the single for loop have 
 
 3. Choosing the algorithm to load into my machine.
 
-Based on the results, it can be concluded that the best algorithm is the formula. It is the quickest of the three algorithms and also requires the least memory. On average, its speed is 0.5189ms which is approximately 8000% quicker than the single for loop and approximately 24000% quicker than recursion.
+Based on the results, it can be concluded that the best algorithm is the formula. It performed the fastest of the three algorithms and also requires the least memory. On average, its speed is 0.5189ms which is 80 times quicker than the single for loop and 240 times quicker than recursion.
 
-0.1253087
-0.0405379
