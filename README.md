@@ -44,17 +44,18 @@ and choose the fastest one. To help with your decision, the bowling alley where 
 
 **Input**
 
-Input to your electromechanical machine would be the number of layers needed for the game 𝑁.
+- Input to your electromechanical machine would be the number of layers needed for the game 𝑁.
 
 **Output**
 
-Your program should be able to compute the number of pins needed to set-up a bowling game with 𝑁layers.
+- Your program should be able to compute the number of pins needed to set-up a bowling game with 𝑁layers.
 
 **Example**
 
+```txt
 Input: 3 Output: 6 
-
 Input: 4 Output: 10
+```
 
 **Additional Description/Requirements**
 
