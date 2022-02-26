@@ -1,5 +1,6 @@
 # Pinsetter Algorithms
 
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 ### 🚀 Quickstart
 1. Fork the repository or
@@ -75,3 +76,11 @@ Assume that in the 1940s, the programming languages of today exist because you�
 
 Being a responsible pinsetter, you also would like to write a short journal entry on which algorithm you chose to load into your machine. Explain why that algorithm was correct, how long did it take to run at least 384 times, and why it ran the fastest among all of the three.
 
+## 👨‍💻 Author
+
+- [Joie Llantero](https://github.com/joiellantero)
+
+
+## 📄 License 
+
+- [MIT license](http://opensource.org/licenses/mit-license.php)
